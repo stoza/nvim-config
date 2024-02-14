@@ -10,7 +10,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup{
-                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls'}, -- this allow to be sure the language we want are installed
+                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman'}, -- this allow to be sure the language we want are installed
             }
         end
     },
@@ -25,6 +25,7 @@ return {
             LSPconfig.clangd.setup {}
             LSPconfig.gopls.setup {}
             LSPconfig.jsonls.setup {}
+            LSPconfig.marksman.setup {}
             -- keybindings (can find the list by typing :help vim.lsp.buf)
             vim.keymap.set('n', 'R', vim.lsp.buf.rename, {}) -- MAJUSCULE R will rename all occurance of the word under cursor
         end
