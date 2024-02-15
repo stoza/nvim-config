@@ -38,7 +38,7 @@ return {
             LSPconfig.marksman.setup({
                 capabilities = capabilities
             })
-            LSPconfig.marksman.setup({
+            LSPconfig.pyright.setup({
                 capabilities = capabilities
             })
 
