@@ -10,6 +10,17 @@ return {
     "MunifTanjim/nui.nvim"
   },
   config = function()
+        local neotree = require('neo-tree')
+
+        neotree.setup({
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    hide_dotfiles = false,
+                    hide_gitignore = false,
+                }
+            }
+        })
     vim.keymap.set('n', '<A-n>', ':Neotree toggle reveal<CR>')
   end
 }
