@@ -3,10 +3,10 @@ return {
     dependencies = {'nvim-tree/nvim-web-devicons'},
     config = function()
         --TODO should explore more the setup of lualine
-        require('lualine').setup({ -- why exactly do we need the setup here??
+       require('lualine').setup({ -- why exactly do we need the setup here??
             options = {
                 icons_enabled = true,
-                theme = 'dracula'
+                theme = 'powerline'
             }
         })
     end
