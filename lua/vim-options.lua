@@ -24,4 +24,5 @@ end
 vim.cmd("set confirm") --ask before closing unsaved file
 
 --keymapping
+vim.cmd("nnoremap <Space> <NOP>") --Use to unmap space in normal mode
 vim.g.mapleader = " "
