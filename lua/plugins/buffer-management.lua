@@ -4,6 +4,5 @@ return {
         require("buffer_manager").setup({})
         local bmui = require("buffer_manager.ui")
         vim.keymap.set('n', '<Leader>m', bmui.toggle_quick_menu, {})
-
     end
 }
