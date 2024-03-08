@@ -18,6 +18,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
+            require("mason")
             local LSPconfig = require('lspconfig')
             local capabilities = require('cmp_nvim_lsp').default_capabilities() -- used to have the completion by lsp
 
