@@ -9,6 +9,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
+            require("mason")
             require("mason-lspconfig").setup{
                 ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'html', 'solc'}, -- this allow to be sure the language we want are installed
             }
@@ -18,7 +19,6 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            require("mason")
             local LSPconfig = require('lspconfig')
             local capabilities = require('cmp_nvim_lsp').default_capabilities() -- used to have the completion by lsp
 
