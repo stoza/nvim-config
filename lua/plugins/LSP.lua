@@ -8,8 +8,8 @@ return {
     -- mason-lspconfig
     {
         "williamboman/mason-lspconfig.nvim",
+        dependencies = {'williamboman/mason.nvim'},
         config = function()
-            require("mason")
             require("mason-lspconfig").setup{
                 ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'html', 'solc'}, -- this allow to be sure the language we want are installed
             }
@@ -53,6 +53,8 @@ return {
             vim.keymap.set('n', 'R', vim.lsp.buf.rename, {}) -- MAJUSCULE R will rename all occurance of the word under cursor
             vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, {})
             vim.keymap.set('n', '<leader>f', vim.lsp.buf.references, {})
+            -- should add multiple keymap --
+            -- 1. go to the error in the file --
         end
     }
 }
