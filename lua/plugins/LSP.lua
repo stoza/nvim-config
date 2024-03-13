@@ -55,6 +55,7 @@ return {
             -- keybindings (can find the list by typing :help vim.lsp.buf)
             vim.keymap.set('n', 'R', vim.lsp.buf.rename, {}) -- MAJUSCULE R will rename all occurance of the word under cursor
             vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, {})
+            vim.keymap.set('n', '<leader>q', vim.lsp.buf.hover, {})
             -- now use in telescope vim.keymap.set('n', '<leader>f', vim.lsp.buf.references, {})
             -- should add multiple keymap --
             -- 1. go to the error in the file --
