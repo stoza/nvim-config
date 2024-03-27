@@ -19,7 +19,7 @@ return {
             vim.keymap.set('n', '<leader>p', builtin.live_grep, {})
             vim.keymap.set('n', '<Leader>m', builtin.buffers, {})
             vim.keymap.set('n', '<leader>t', builtin.colorscheme, {noremap = true})
-            vim.keymap.set('n', '<leader>f', builtin.lsp_definitions, {})
+            vim.keymap.set('n', '<leader>f', builtin.lsp_references, {})
         end
     }
 }
