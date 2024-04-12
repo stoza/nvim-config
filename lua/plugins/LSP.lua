@@ -11,7 +11,7 @@ return {
         dependencies = {'williamboman/mason.nvim'},
         config = function()
             require("mason-lspconfig").setup{
-                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'html', 'solc', 'texlab'}, -- this allow to be sure the language we want are installed
+                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'html', 'solc', 'texlab', 'intelephense'}, -- this allow to be sure the language we want are installed
             }
         end
     },
@@ -49,6 +49,9 @@ return {
                 capabilities = capabilities
             })
             LSPconfig.texlab.setup({
+                capabilities = capabilities
+            })
+            LSPconfig.intelephense.setup({
                 capabilities = capabilities
             })
 
