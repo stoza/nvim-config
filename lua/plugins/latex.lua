@@ -10,9 +10,10 @@ return {
         vim.g.vimtex_compiler_method = "latexmk"
         vim.g.vimtex_compiler_latexmk = {
             options = {
+                "-f", -- use to not stop at error
                 "--verbose",
                 "-aux-directory=./aux",
-                "-output-directory=./out",
+                --"-output-directory=./out",
             }
         }
         vim.keymap.set('n', '<C-s>', ":VimtexCompile<CR>")
