@@ -14,7 +14,7 @@ return {
     {
         "navarasu/onedark.nvim",
         config = function ()
-            require('onedark').load()
+            vim.cmd.colorscheme "carbonfox"
         end
     }
 }
