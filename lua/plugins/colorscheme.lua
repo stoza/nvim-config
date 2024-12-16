@@ -13,8 +13,14 @@ return {
     },
     {
         "navarasu/onedark.nvim",
+--       config = function ()
+--            vim.cmd.colorscheme "carbonfox"
+--        end
+    },
+    {
+        "sekke276/dark_flat.nvim",
         config = function ()
-            vim.cmd.colorscheme "carbonfox"
+            vim.cmd.colorscheme "dark_flat"
         end
     }
 }
