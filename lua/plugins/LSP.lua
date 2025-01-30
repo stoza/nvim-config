@@ -11,7 +11,7 @@ return {
         dependencies = {'williamboman/mason.nvim'},
         config = function()
             require("mason-lspconfig").setup{
-                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'solc', 'texlab', 'intelephense', 'tsserver'}, -- this allow to be sure the language we want are installed
+                ensure_installed = {'clangd', 'gopls', 'jsonls', 'lua_ls', 'marksman', 'pyright', 'solc', 'texlab', 'intelephense' }, -- this allow to be sure the language we want are installed
             }
         end
     },
@@ -51,7 +51,7 @@ return {
             LSPconfig.intelephense.setup({
                 capabilities = capabilities
             })
-            LSPconfig.tsserver.setup({
+            LSPconfig.ltex.setup({ -- require to manually install the server from the realease page ltex-ls-plus
                 capabilities = capabilities
             })
 
