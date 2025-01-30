@@ -15,8 +15,8 @@ return {
             })
             require("telescope").load_extension("ui-select")
             local builtin = require("telescope.builtin")
-            vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>p', builtin.live_grep, {})
+            vim.keymap.set('n', '<C-p>', builtin.find_files, {}) -- find a file with CTRL+p
+            vim.keymap.set('n', '<leader>p', builtin.live_grep, {}) --grep in all file with leader+p
             vim.keymap.set('n', '<Leader>m', builtin.buffers, {})
             vim.keymap.set('n', '<leader>t', builtin.colorscheme, {noremap = true})
             vim.keymap.set('n', '<leader>f', builtin.lsp_references, {})
