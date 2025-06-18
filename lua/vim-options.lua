@@ -28,3 +28,6 @@ vim.keymap.set('n', '<SPACE>', '<NOP>', {}) --use to unmap space in normal mode
 vim.keymap.set('n', '<CR>', '<NOP>', {}) --use to unmap space in normal mode
 vim.g.mapleader = " "
 vim.keymap.set('n', '<Leader><CR>', 'A<CR><esc>', {}) --use to add a new line in normal mode (space + enter)
+
+vim.keymap.set('n', '<C-l>', '<C-w>l', {noremap=true}) -- remap the moving between pane with just CTRL
+vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap=true})
