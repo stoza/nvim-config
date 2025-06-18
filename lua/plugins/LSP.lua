@@ -63,6 +63,9 @@ return {
             -- now use in telescope vim.keymap.set('n', '<leader>f', vim.lsp.buf.references, {})
             -- should add multiple keymap --
             -- 1. go to the error in the file --
+            vim.keymap.set('n', '<leader>e', '<cmd>Telescope diagnostics<cr>')
+            -- open the list of symbol in telescope (ie liste of function name and variable)
+            vim.keymap.set('n', '<leader>o', '<cmd>Telescope lsp_document_symbols<cr>')
         end
     }
 }
