@@ -38,3 +38,18 @@ vim.keymap.set('n', '<Leader><CR>', 'A<CR><esc>', {}) --use to add a new line in
 
 vim.keymap.set('n', '<C-l>', '<C-w>l', {noremap=true}) -- remap the moving between pane with just CTRL
 vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap=true})
+
+------------------------
+--LSP related binding --
+------------------------
+-- keybindings (can find the list by typing :help vim.lsp.buf)
+vim.keymap.set('n', 'R', vim.lsp.buf.rename, {}) -- MAJUSCULE R will rename all occurance of the word under cursor
+vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, {})
+vim.keymap.set('n', '<leader>q', vim.lsp.buf.hover, {})
+vim.keymap.set('n', '<leader>z', vim.lsp.buf.code_action, {})
+-- now use in telescope vim.keymap.set('n', '<leader>f', vim.lsp.buf.references, {})
+-- should add multiple keymap --
+-- 1. go to the error in the file --
+vim.keymap.set('n', '<leader>e', '<cmd>Telescope diagnostics<cr>')
+-- open the list of symbol in telescope (ie liste of function name and variable)
+vim.keymap.set('n', '<leader>o', '<cmd>Telescope lsp_document_symbols<cr>')
