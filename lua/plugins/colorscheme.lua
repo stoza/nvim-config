@@ -13,14 +13,17 @@ return {
     },
     {
         "navarasu/onedark.nvim",
---       config = function ()
---            vim.cmd.colorscheme "carbonfox"
---        end
+       config = function ()
+            require('onedark').setup {
+                style = 'deep'
+            }
+            require('onedark').load()
+        end
     },
     {
         "sekke276/dark_flat.nvim",
-        config = function ()
-            vim.cmd.colorscheme "dark_flat"
-        end
+--        config = function ()
+--            vim.cmd.colorscheme "dark_flat"
+--        end
     }
 }
