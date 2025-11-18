@@ -20,6 +20,13 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl})
 end
 
+vim.diagnostic.config({
+  virtual_text = true,  -- Show errors as virtual text next to the line
+  signs = true,         -- Show error signs in the sign column
+  underline = true,     -- Underline the error text
+  update_in_insert = false,
+})
+
 -- stuff to not acidentally close unsaved file
 vim.cmd("set confirm") --ask before closing unsaved file
 
