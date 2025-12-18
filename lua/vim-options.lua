@@ -13,17 +13,15 @@ vim.cmd("set relativenumber") --use to see relative number line
 vim.cmd("set number")
 vim.cmd("set title") --reflecting the current file being edited
 
--- diagnostic symbol
-local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl})
-end
-
 vim.diagnostic.config({
   virtual_text = true,  -- Show errors as virtual text next to the line
   signs = true,         -- Show error signs in the sign column
   underline = true,     -- Underline the error text
+    float =  {
+        scope = 'cursor',
+        source = 'always',
+        border = "rounded",
+    },
   update_in_insert = false,
 })
 
